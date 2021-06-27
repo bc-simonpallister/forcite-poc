@@ -1,11 +1,22 @@
+GET https://api.bigcommerce.com/stores/fjqp74x0uy/v3/hooks
+X-Auth-token: lsyhhen6wimaefif0szsp5dw8hyy9g9
+Content-Type: application/json
+
+
+###
 POST https://api.bigcommerce.com/stores/fjqp74x0uy/v3/hooks
 X-Auth-token: lsyhhen6wimaefif0szsp5dw8hyy9g9
 Content-Type: application/json
 
 {
   "scope": "store/order/created",
-  "destination": "https://forcite.loca.lt/api/listener"
+  "destination": "https://https://forcite-poc.vercel.app//api/listener"
 }
+
+###
+DELETE https://api.bigcommerce.com/stores/fjqp74x0uy/v3/hooks/21922096
+X-Auth-token: lsyhhen6wimaefif0szsp5dw8hyy9g9
+Content-Type: application/json
 
 ###
 POST http://localhost:3000/api/listener
@@ -16,7 +27,7 @@ Content-Type: application/json
     "store_id": "1025646",
     "data": {
         "type": "order",
-        "id": 105
+        "id": 106
     },
     "hash": "dd70c0976e06b67aaf671e73f49dcb79230ebf9d",
     "created_at": 1561479335,
