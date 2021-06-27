@@ -1,0 +1,40 @@
+POST https://api.bigcommerce.com/stores/fjqp74x0uy/v3/hooks
+X-Auth-token: lsyhhen6wimaefif0szsp5dw8hyy9g9
+Content-Type: application/json
+
+{
+  "scope": "store/order/created",
+  "destination": "https://forcite.loca.lt/api/listener"
+}
+
+###
+POST http://localhost:3000/api/listener
+Content-Type: application/json
+
+{
+    "scope": "store/order/created",
+    "store_id": "1025646",
+    "data": {
+        "type": "order",
+        "id": 105
+    },
+    "hash": "dd70c0976e06b67aaf671e73f49dcb79230ebf9d",
+    "created_at": 1561479335,
+    "producer": "stores/fjqp74x0uy"
+}
+
+###
+GET https://api.bigcommerce.com/stores/fjqp74x0uy/v3/hooks
+X-Auth-token: lsyhhen6wimaefif0szsp5dw8hyy9g9
+Content-Type: application/json
+
+###
+GET https://api.bigcommerce.com/stores/fjqp74x0uy/v2/orders/103
+X-Auth-token: lsyhhen6wimaefif0szsp5dw8hyy9g9
+Content-Type: application/json
+
+###
+GET https://api.bigcommerce.com/stores/fjqp74x0uy/v3/catalog/products/121/modifiers
+X-Auth-token: lsyhhen6wimaefif0szsp5dw8hyy9g9
+Content-Type: application/json
+
